@@ -1,0 +1,199 @@
+
+/* eslint-disable css/use-baseline */
+
+/*PARTE DO PERFIL, FOTO E NOME*/
+
+
+/*BODY OCUPA 100% DA VIEW HEIGHT*/
+
+body {
+  min-height: 100vh;
+  background: url(./assets/batman\ desktop.jpg) no-repeat top center/cover;
+  margin: 0;
+}
+
+/*RESET CSS / CONFIGURAÇÕES GLOBAIS / Seletor * (universal), ele serve para aplicar as propriedas em TODOS elementos do HTML, sem exceção. Tem baixa especificidade (0,0,0)*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* o asterisco serve para selecionar todos os elementos dentro do <body>, sem exceção.*/
+
+body * {
+  font-family: "Inter", sans-serif;
+  color: white;
+}
+
+/*poderia ter sido usado padding-top tambem, weight é o quão negrito a fonte vai ficar, e line-height é o espaçamento entre linhas*/
+
+#profile p {
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 8px;
+}
+
+/*o margin esta em shorthand portanto ele funciona como um relogio, os valores aplicados em ordem é CIMA, DIREITA, BAIXO, ESQUERDA. Literalmente sentido horário.
+
+o shorthand é uma forma resumida de escrever propriedades CSS que aceitam múltiplos valores.
+
+Outra forma de escrever seria:
+
+margin-top: 56px;
+margin-right: auto;
+margin-bottom: 0px;
+margin-left: auto;
+*/
+#container {
+  padding: 0px 24px;
+  width: 360px;
+  margin: 56px auto 0 auto;
+}
+
+/*aqui foi usado text-align para alinhar a imagem, porem poderia tambem ser usado o margin:auto; e display: block; no profile img 
+
+fazendo assim: o #profile img ficaria centralizado
+
+pra completar, seria usado text-align no profile apenas para alinhar o texto ou poderia ser usado na propria id profile p*/
+
+#profile {
+  text-align: center;
+  padding: 24px;
+}
+
+#profile img {
+  width: 112px;
+  transition: ease 0.2s;
+}
+
+#profile img:hover {
+  background: rgb(0, 0, 0);
+  border-radius: 50%;
+  backdrop-filter: blur(8px);
+}
+
+/*PARTE DOS LINKS DAS REDES SOCIAIS*/
+
+
+
+/*list-style: none; remove os marcadores/bullets/bolinhas da lista*/
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+   padding: 24px 0px;
+
+}
+
+/*O text-align apenas alinha o conteúdo inline de um elemento, como texto ou imagens inline. Quando você usa display: flex, o alinhamento dos itens filhos não depende de text-align, mas sim das propriedades do Flexbox:
+
+
+justify-content → alinha os itens horizontalmente (no eixo principal).
+
+align-items → alinha os itens verticalmente (no eixo cruzado).
+
+align-self → alinha individualmente um item no eixo cruzado.*/
+
+
+/*o li ocupa 100% da caixa. Mas o elemento "a" (link) é inline e n ocupa toda largura da caixa, somente se o display for block ou flex. Caso contrário, ele só ocupa o tamanho do conteudo */
+
+/*gap se traduz: espaço, lacuna, intervalo. Nesse caso, será ele o responsavel pelo espaçamento entre os itens do flex container.*/
+
+
+/*O FLEX-DIRECTION TEM DUAS POSSIBILIDADES, SER ROW OU COLUMN. O PADRÃO DELE É ROW. CADA UM DOS DOIS TEM UM EIXO PRINCIPAL E UM EIXO CRUZADO DIFERENTE:
+
+ROW -> EIXO PRINCIPAL: HORIZONTAL (como o nome sugere) ---- esse é o padrão
+COLUMN -> EIXO PRINCIPAL: COLUNA (como o nome sugere)
+
+justify-content ALINHA OS ITENS SEMPRE NO EIXO PRINCIPAL (AXIS MAIN) / por padrão o eixo principal é horizontal (row)
+
+align-items ALINHA OS ITENS SEMPRE NO EIXO CRUZADO (AXIS CROSS)
+
+*/
+
+ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 24px;
+  border: 1px solid rgb(50, 6, 6);
+  background: rgba(188, 180, 180, 0.104);
+  border-radius: 8px;
+  backdrop-filter: blur(8px);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.1s; /*transição é uma animação simples, nesse caso: da propriedade background por 0.2s. Ela é feita para o efeito hover do background n ficar mt seco, no lugar do background tambem poderiamos deixar "all" mas n é recomendado*/
+}
+
+/*efeito que dá ao passar o mouse em cima*/
+
+ul li a:hover {
+    border: 1px solid rgb(174, 31, 31);
+  background: rgba(31, 30, 31, 0.726);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(30px);
+}
+
+#redessociais-links {
+  display: flex;
+  justify-content: center;
+  padding: 24px 0px;
+  gap: 32px;
+  font-size: 24px;
+}
+#redessociais-links a {
+   padding: 16px;
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    transition: background 0.099s ;
+    border-radius: 50%;
+}
+
+
+
+#redessociais-links a:hover {
+  background: rgb(100, 89, 91);
+  background-color: rgb(121, 6, 6);
+}
+
+
+
+
+
+#nome2 {
+  font-style: italic;
+   color: red; 
+   background: rgba(71, 69, 71, 0.57); 
+   border-radius: 4px; 
+   border: 1px solid red; 
+   padding: 4px; 
+   transition: background 0.1s;
+}
+
+
+#nome1:hover {
+    color: red;
+
+}
+
+#nome2:hover {
+  background: rgba(127, 7, 7, 0.475);
+
+}
+
+footer {
+  text-align: center;
+  padding: 24px 0px; 
+  font-size: 14px;
+}
+footer:hover {
+  text-align: center;
+  color: red;
+}
+
+
+
