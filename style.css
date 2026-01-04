@@ -6,10 +6,13 @@
 
 /*BODY OCUPA 100% DA VIEW HEIGHT*/
 
-body {
-  min-height: 100vh;
+/* VIEWPORT MUDA → USE svh + min-height */
+
+
+html, body {
+  min-height: 100svh;
   background: url(./assets/batman\ desktop.jpg) no-repeat top center/cover;
-  margin: 0;
+  margin: 0px;
 }
 
 /*RESET CSS / CONFIGURAÇÕES GLOBAIS / Seletor * (universal), ele serve para aplicar as propriedas em TODOS elementos do HTML, sem exceção. Tem baixa especificidade (0,0,0)*/
@@ -159,8 +162,6 @@ ul li a:hover {
   background: rgb(100, 89, 91);
   background-color: rgb(121, 6, 6);
 }
-
-
 
 
 
